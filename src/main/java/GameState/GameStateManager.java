@@ -1,21 +1,25 @@
 package GameState;
 
+import GMain.GamePanel;
+
 import java.util.ArrayList;
 
-public class GameStateManager {
+public class GameStateManager{
 
-    private ArrayList<GameState> gameStates;
+    private final ArrayList<GameState> gameStates;
     private int currentState;
 
-    private static final int MENUSTATE = 0;
-    private static final int LEVEL1STATE = 1;
+    static final int MENUSTATE = 0;
+    static final int LEVEL1STATE = 1;
+    static final int BACKGROUNDTESTSTATE = 2;
 
-    public GameStateManager(){
+    public GameStateManager() {
         gameStates = new ArrayList<GameState>();
 
         currentState = MENUSTATE;
         gameStates.add(new MenuState(this));
         gameStates.add(new Level1State(this));
+        gameStates.add(new BackgroundTestState(this));
     }
 
     public void setState(int state) {
@@ -24,16 +28,21 @@ public class GameStateManager {
     }
 
 
-    public void update(){
+    public void update() {
         gameStates.get(currentState).update();
     }
 
-    public void draw(java.awt.Graphics2D g){
+    public void draw(java.awt.Graphics2D g) {
         gameStates.get(currentState).draw(g);
     }
 
-    public void keyPressed(int k){gameStates.get(currentState).keyPressed(k);}
-    public void keyReleased(int k){gameStates.get(currentState).keyReleased(k);}
+    public void keyPressed(int k) {
+        gameStates.get(currentState).keyPressed(k);
+    }
+
+    public void keyReleased(int k) {
+        gameStates.get(currentState).keyReleased(k);
+    }
 
 }
 

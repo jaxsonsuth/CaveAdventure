@@ -7,7 +7,8 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
-public class GamePanel extends JPanel implements Runnable, KeyListener{
+
+public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     //dimensions
     public static final int WIDTH = 320;
@@ -17,8 +18,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     //game thread
     private Thread thread;
     private boolean running;
-    private int FPS = 60;
-    private long targetTime = 1000/FPS;
+    private final int FPS = 60;
+    private final long targetTime = 1000 / FPS;
 
     // image
     private BufferedImage image;
@@ -27,7 +28,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
     // game state manager
     private GameStateManager gsm;
 
-    public GamePanel(){
+    public GamePanel() {
         super();
         setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
         setFocusable(true);
@@ -36,28 +37,28 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     public void addNotify() {
         super.addNotify();
-        if(thread == null){
+        if (thread == null) {
             thread = new Thread(this);
             addKeyListener(this);
             thread.start();
         }
     }
 
-    private void init(){
-        image = new BufferedImage(WIDTH,HEIGHT, BufferedImage.TYPE_INT_RGB);
+    private void init() {
+        image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         g = (Graphics2D) image.getGraphics();
         running = true;
 
         gsm = new GameStateManager();
     }
 
-    public void run(){
+    public void run() {
         init();
 
         // timers
         long start, elasped, wait;
         // main loop
-        while(running){
+        while (running) {
 
             start = System.nanoTime();
 
@@ -69,30 +70,35 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
             wait = targetTime - elasped / 1000000;
 
-            try{
+            try {
                 Thread.sleep(wait);
             } catch (Exception e) {
-               e.printStackTrace();
+                e.printStackTrace();
             }
         }
     }
 
-    private void update(){
+    private void update() {
         gsm.update();
     }
+
     private void draw() {
         gsm.draw(g);
     }
+
     private void drawToScreen() {
         Graphics gDraw = getGraphics();
-        gDraw.drawImage(image,0,0, WIDTH*SCALE, HEIGHT* SCALE, null);
+        gDraw.drawImage(image, 0, 0, WIDTH * SCALE, HEIGHT * SCALE, null);
         gDraw.dispose();
     }
 
-    public void keyTyped(KeyEvent key) {}
+    public void keyTyped(KeyEvent key) {
+    }
+
     public void keyPressed(KeyEvent key) {
         gsm.keyPressed(key.getKeyCode());
     }
+
     public void keyReleased(KeyEvent key) {
         gsm.keyReleased(key.getKeyCode());
     }

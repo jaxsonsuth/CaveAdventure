@@ -47,7 +47,7 @@ public class MenuState extends GameState {
         g.drawString("Cave Adventure", 80, 70);
 
         g.setFont(font);
-        for (int i = 0; i < options.length; i ++) {
+        for (int i = 0; i < options.length; i++) {
             if (i == currentChoice) {
                 g.setColor(Color.black);
             } else {
@@ -57,29 +57,30 @@ public class MenuState extends GameState {
         }
     }
 
-    private void select(){
-        if(currentChoice == 0){
-            gsm.setState(GameStateManager.LEVEL1STATE);
+    private void select() {
+        if (currentChoice == 0) {
+            gsm.setState(GameStateManager.BACKGROUNDTESTSTATE);
         }
-        if(currentChoice == 1){}
-        if(currentChoice == 2){
+        if (currentChoice == 1) {
+        }
+        if (currentChoice == 2) {
             System.exit(0);
         }
     }
 
     public void keyPressed(int k) {
-        if(k == KeyEvent.VK_ENTER){
+        if (k == KeyEvent.VK_ENTER) {
             select();
         }
-        if(k == KeyEvent.VK_UP){
+        if (k == KeyEvent.VK_UP) {
             currentChoice--;
-            if(currentChoice == -1){
+            if (currentChoice == -1) {
                 currentChoice = options.length - 1;
             }
         }
-        if(k == KeyEvent.VK_DOWN){
+        if (k == KeyEvent.VK_DOWN) {
             currentChoice++;
-            if(currentChoice == options.length){
+            if (currentChoice == options.length) {
                 currentChoice = 0;
             }
         }

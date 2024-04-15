@@ -1,20 +1,72 @@
 package GameState;
 
-import java.awt.*;
+import Entity.Player;
+import GMain.GamePanel;
+import TileMap.Background;
+import TileMap.TileMap;
 
-public class Level1State extends GameState{
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
+public class Level1State extends GameState {
 
     private TileMap tileMap;
+    private Background bg;
 
-    public Level1State(GameStateManager gsm){
+    private Player player;
+
+    public Level1State(GameStateManager gsm) {
         this.gsm = gsm;
-        init();
+        try {
+            tileMap = new TileMap(30);
+            tileMap.loadTiles("/Tilesets/grasstileset.gif");
+            tileMap.loadMap("/Maps/test.map");
+            tileMap.setPosition(0, 0);
+
+            bg = new Background("/Backgrounds/grassbg1.gif", 0.1);
+
+            player = new Player(tileMap);
+            player.setPosition(100, 100);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void init() {
+
+
     }
-    public void update() {}
-    public void draw(Graphics2D g) {}
-    public void keyPressed(int k) {}
-    public void keyReleased(int k) {}
+
+    public void update() {
+        player.update();
+
+        tileMap.setPosition(GamePanel.WIDTH /2 - player.getx(),GamePanel.HEIGHT / 2 - player.gety());
+    }
+
+
+    public void draw(Graphics2D g) {
+        bg.draw(g);
+        tileMap.draw(g);
+        player.draw(g);
+    }
+
+    public void keyPressed(int k) {
+        if(k == KeyEvent.VK_LEFT) player.setLeft(true);
+        if(k == KeyEvent.VK_RIGHT) player.setRight(true);
+        if(k == KeyEvent.VK_UP) player.setUp(true);
+        if(k == KeyEvent.VK_DOWN) player.setDown(true);
+        if(k == KeyEvent.VK_W) player.setJumping(true);
+        if(k == KeyEvent.VK_E) player.setGliding(true);
+        if(k == KeyEvent.VK_R) player.setScratching();
+        if(k == KeyEvent.VK_F) player.setFiring();
+    }
+
+    public void keyReleased(int k) {
+        if(k == KeyEvent.VK_LEFT) player.setLeft(false);
+        if(k == KeyEvent.VK_RIGHT) player.setRight(false);
+        if(k == KeyEvent.VK_UP) player.setUp(false);
+        if(k == KeyEvent.VK_DOWN) player.setDown(false);
+        if(k == KeyEvent.VK_W) player.setJumping(false);
+        if(k == KeyEvent.VK_E) player.setGliding(false);
+    }
 }
