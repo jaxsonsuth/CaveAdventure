@@ -17,3 +17,7 @@ Given a user in a level, when they press a movement key, the player should move 
 Given a user moving, when the press the attack button, the player should stop moving for the duration of the attack.
 Given a user in a level, when they press and hold jump, the player should jump higher than when they just press jump.
 Given a user that is falling, when they press and hold jump, the player should fall slower. 
+
+Test Coverage:
+
+<img width="467" alt="Screenshot 2024-05-03 at 11 51 04 AM" src="https://github.com/jaxsonsuth/CaveAdventure/assets/82791982/181b06a9-4206-4b5b-9b7d-a9e6a9bfbc0b">
