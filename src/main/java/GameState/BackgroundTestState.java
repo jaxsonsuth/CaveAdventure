@@ -1,10 +1,12 @@
 package GameState;
 
 import Entity.Explorer;
+import Entity.MapObjectFacrory;
 import Entity.Player;
 import GMain.GamePanel;
 import TileMap.Background;
 import TileMap.TileMap;
+import TileMap.TileMapFactory;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -26,23 +28,24 @@ public class BackgroundTestState extends GameState{
     public BackgroundTestState(GameStateManager gsm) {
         this.gsm = gsm;
         try {
-            tileMap = new TileMap(30);
+            tileMap = tmFactory.createTileMap(30);
             tileMap.loadTiles("/Tilesets/map-2.png");
             tileMap.loadMap("/Maps/test.map");
             tileMap.setPosition(0, 0);
 
-            bg1 = new Background("/Backgrounds/1.png", 0.0);
-            bg2 = new Background("/Backgrounds/2.png", 0.05);
-            bg3 = new Background("/Backgrounds/3fx.png", 0.01);
-            bg4 = new Background("/Backgrounds/4.png", 0.05);
-            bg5 = new Background("/Backgrounds/5.png", 0.05);
-            bg6 = new Background("/Backgrounds/6fx.png", 0.1);
-            bg7 = new Background("/Backgrounds/7.png", 0.05);
-            bg8 = new Background("/Backgrounds/8fx.png", 0.1);
-            bg9 = new Background("/Backgrounds/9.png", 0.05);
+            bg1 = tmFactory.createBackground("/Backgrounds/1.png", 0.0);
+            bg2 = tmFactory.createBackground("/Backgrounds/2.png", 0.05);
+            bg3 = tmFactory.createBackground("/Backgrounds/3fx.png", 0.01);
+            bg4 = tmFactory.createBackground("/Backgrounds/4.png", 0.05);
+            bg5 = tmFactory.createBackground("/Backgrounds/5.png", 0.05);
+            bg6 = tmFactory.createBackground("/Backgrounds/6fx.png", 0.1);
+            bg7 = tmFactory.createBackground("/Backgrounds/7.png", 0.05);
+            bg8 = tmFactory.createBackground("/Backgrounds/8fx.png", 0.1);
+            bg9 = tmFactory.createBackground("/Backgrounds/9.png", 0.05);
 
 
-            explorer = new Explorer(tileMap);
+//            explorer = new Explorer(tileMap);
+            explorer = moFactory.createExplorer(tileMap);
             explorer.setPosition(100, 100);
         } catch (Exception e) {
             e.printStackTrace();

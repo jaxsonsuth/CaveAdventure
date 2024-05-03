@@ -5,50 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0013b74a-f532-4576-960e-41094f4ccdb1" name="Changes" comment="First push">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entity/Animation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entity/Explorer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entity/MapObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GameState/BackgroundTestState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TileMap/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/3fx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/6fx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/8fx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Backgrounds/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Maps/test.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Explorer/HolsterWeaponReaper-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Explorer/HostileAttackReaper-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Explorer/HostileIdleReaper-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Explorer/HostileRunningReaper-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Explorer/PassiveIdleReaper-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Explorer/PassiveRunningReaper-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Sprites/Explorer/WieldWeaponReaper-Sheet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Tilesets/map-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BackgroundTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BackgroundTestStateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ExplorerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GamePanelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GameStateManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MenuStateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TileMapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entity/MapObjectFacrory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GameState/GameStateFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TileMap/TileMapFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Explorer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Explorer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GMain/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GMain/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GMain/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GMain/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameState/BackgroundTestState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameState/BackgroundTestState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GameState/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameState/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GameState/GameStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameState/GameStateManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GameState/Level1State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameState/Level1State.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GameState/MenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameState/MenuState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TileMap/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TileMap/Background.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TileMap/TileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TileMap/TileMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Maps/level1-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Maps/level1-1.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +81,7 @@
     "Gradle.GameStateManagerTest.gsmTest.executor": "Run",
     "Gradle.GameStateManagerTest.setStateTest.executor": "Run",
     "Gradle.GameTest.gameTest.executor": "Run",
+    "Gradle.GameTest.runGame.executor": "Coverage",
     "Gradle.MenuStateTest.menuTest.executor": "Run",
     "Gradle.PlayerTest.playerTest.executor": "Run",
     "Gradle.Tests in 'CaveAdventure.test'.executor": "Coverage",
@@ -156,7 +127,7 @@
       <recent name="Entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TileMapTest.tileMapTestFun">
+  <component name="RunManager" selected="Application.Game">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GMain.Game" />
       <module name="CaveAdventure.main" />
@@ -170,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExplorerTest.explorerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GameTest.runGame" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -183,7 +154,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ExplorerTest.explorerTest&quot;" />
+            <option value="&quot;GameTest.runGame&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -266,11 +237,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GameTest.runGame" />
         <item itemvalue="Gradle.TileMapTest.tileMapTestFun" />
         <item itemvalue="Gradle.TileMapTest.tileMapLoadTest" />
         <item itemvalue="Application.Game" />
         <item itemvalue="Gradle.Tests in 'CaveAdventure.test'" />
-        <item itemvalue="Gradle.ExplorerTest.explorerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -290,7 +261,9 @@
       <option name="presentableId" value="Default" />
       <updated>1712813873753</updated>
       <workItem from="1712813875074" duration="46502000" />
-      <workItem from="1713150175240" duration="6717000" />
+      <workItem from="1713150175240" duration="7567000" />
+      <workItem from="1713936919360" duration="41000" />
+      <workItem from="1714694691903" duration="6753000" />
     </task>
     <task id="LOCAL-00001" summary="First push">
       <option name="closed" value="true" />
@@ -342,6 +315,7 @@
     <SUITE FILE_PATH="coverage/CaveAdventure$TileMapTest_tileMapLoadTest.ic" NAME="TileMapTest.tileMapLoadTest Coverage Results" MODIFIED="1713152435904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/CaveAdventure$TileMapTest_tileMapTest.ic" NAME="TileMapTest.tileMapTest Coverage Results" MODIFIED="1713152339065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/CaveAdventure$BackgroundTestStateTest_bgTest.ic" NAME="BackgroundTestStateTest.bgTest Coverage Results" MODIFIED="1713153472114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CaveAdventure$GameTest_runGame.ic" NAME="GameTest.runGame Coverage Results" MODIFIED="1714695796488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/CaveAdventure$BackgroundTest_backgroundTest.ic" NAME="BackgroundTest.backgroundTest Coverage Results" MODIFIED="1713151289226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/CaveAdventure$Tests_in__CaveAdventure_test_.ic" NAME="Tests in 'CaveAdventure.test' Coverage Results" MODIFIED="1713155077567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>

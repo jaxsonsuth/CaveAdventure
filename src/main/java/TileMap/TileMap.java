@@ -49,6 +49,7 @@ public class TileMap {
 
     public void loadTiles(String s) {
         try {
+            TileMapFactory tmFactory = new TileMapFactory();
             tileset = ImageIO.read(getClass().getResourceAsStream(s));
             numTilesAcross = tileset.getWidth() / tileSize;
             tiles = new Tile[2][numTilesAcross];
@@ -56,9 +57,9 @@ public class TileMap {
             BufferedImage subimage;
             for (int col = 0; col < numTilesAcross; col++) {
                 subimage = tileset.getSubimage(col * tileSize, 0, tileSize, tileSize);
-                tiles[0][col] = new Tile(subimage, Tile.NORMAL);
+                tiles[0][col] = tmFactory.createTile(subimage, Tile.NORMAL);
                 subimage = tileset.getSubimage(col * tileSize, tileSize, tileSize, tileSize);
-                tiles[1][col] = new Tile(subimage, Tile.BLOCKED);
+                tiles[1][col] = tmFactory.createTile(subimage, Tile.BLOCKED);
 
             }
         } catch (Exception e) {

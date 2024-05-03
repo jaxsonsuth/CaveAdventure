@@ -43,8 +43,8 @@ public class Explorer extends MapObject {
 
         width = 48;
         height = 48;
-        cwidth = 30;
-        cheight = 30;
+        cwidth = 20;
+        cheight = 20;
 
         fallSpeed = 0.15;
         moveSpeed = 0.3;
@@ -258,9 +258,9 @@ public class Explorer extends MapObject {
         }
 
         if (facingRight) {
-            g.drawImage(animation.getImage(), (int) (x + xmap - (3*width/4)), (int) (y + ymap - height / 2), null);
+            g.drawImage(animation.getImage(), (int) (x + xmap - width / 2), (int) (y + ymap - height / 2), null);
         } else {
-            g.drawImage(animation.getImage(), (int) (x + xmap), (int) (y + ymap - height / 2), -width, height, null);
+            g.drawImage(animation.getImage(), (int) (x + xmap - width / 2 + width), (int) (y + ymap - height / 2), -width, height, null);
         }
     }
 

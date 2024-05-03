@@ -9,7 +9,7 @@ import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 public class GamePanel extends JPanel implements Runnable, KeyListener {
-
+    private static GamePanel instance;
     //dimensions
     public static final int WIDTH = 320;
     public static final int HEIGHT = 240;
@@ -28,7 +28,19 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     // game state manager
     private GameStateManager gsm;
 
-    public GamePanel() {
+    public static GamePanel getInstance(){
+        if (instance == null){
+            synchronized(GamePanel.class){
+                if(instance == null){
+                    instance = new GamePanel();
+                }
+            }
+        }
+        return instance;
+    }
+
+
+    private GamePanel() {
         super();
         setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
         setFocusable(true);
@@ -49,7 +61,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         g = (Graphics2D) image.getGraphics();
         running = true;
 
-        gsm = new GameStateManager();
+        gsm = GameStateManager.getInstance();
     }
 
     public void run() {

@@ -18,14 +18,14 @@ public class Level1State extends GameState {
     public Level1State(GameStateManager gsm) {
         this.gsm = gsm;
         try {
-            tileMap = new TileMap(30);
+            tileMap = tmFactory.createTileMap(30);
             tileMap.loadTiles("/Tilesets/grasstileset.gif");
             tileMap.loadMap("/Maps/test.map");
             tileMap.setPosition(0, 0);
 
-            bg = new Background("/Backgrounds/grassbg1.gif", 0.1);
+            bg = tmFactory.createBackground("/Backgrounds/grassbg1.gif", 0.1);
 
-            player = new Player(tileMap);
+            player = moFactory.createPlayer(tileMap);
             player.setPosition(100, 100);
         } catch (Exception e) {
             e.printStackTrace();

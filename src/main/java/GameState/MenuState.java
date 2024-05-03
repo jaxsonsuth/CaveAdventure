@@ -20,7 +20,7 @@ public class MenuState extends GameState {
     public MenuState(GameStateManager gsm) {
         this.gsm = gsm;
         try {
-            bg = new Background("/Backgrounds/menubg.gif", 1);
+            bg = tmFactory.createBackground("/Backgrounds/menubg.gif", 1);
             bg.setVector(-0.1, 0);
 
             titleColor = new Color(128, 0, 0);
